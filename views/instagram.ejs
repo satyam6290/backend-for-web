@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insagram</title>
+    <style>
+        height:100px;
+        width:100px;
+    </style>
+</head>
+<body>
+    <h1>this page belongs to  <%=data.name%> </h1>
+    <button>follow</button>
+    <button>message</button>
+
+  <p>follower : <%= data.followers %>  &nbsp; &nbsp; &nbsp; &nbsp; following : <%= data.following %> </p>
+  <hr />
+
+
+  <% for(let post of data) { %>
+  <img src="<%=post.image %>" alt ="some img">
+      <p>
+      likes : <%= post.likes %>  &nbsp; &nbsp; &nbsp; &nbsp; comments : <%= post..comments %> 
+      </p>
+   <% } %>
+</body>
+</html>
